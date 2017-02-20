@@ -1,0 +1,6 @@
+c:\users\t420\documents\visual studio 2015\Projects\Kata practice\Kata practice\bin\Debug\Kata practice.exe.config
+C:\Users\T420\Documents\Visual Studio 2015\Projects\Kata practice\Kata practice\bin\Debug\Kata practice.exe
+C:\Users\T420\Documents\Visual Studio 2015\Projects\Kata practice\Kata practice\bin\Debug\Kata practice.pdb
+C:\Users\T420\Documents\Visual Studio 2015\Projects\Kata practice\Kata practice\obj\Debug\Kata practice.csprojResolveAssemblyReference.cache
+C:\Users\T420\Documents\Visual Studio 2015\Projects\Kata practice\Kata practice\obj\Debug\Kata practice.exe
+C:\Users\T420\Documents\Visual Studio 2015\Projects\Kata practice\Kata practice\obj\Debug\Kata practice.pdb
