@@ -75,6 +75,7 @@ namespace Kata_practice
         }
 
         static void InputLetters()
+            //this method gets input from the user, verifies that it is valid, and prints it in reverse order.
         {
             Console.WriteLine("Input a letter");
             string l1 = Console.ReadLine();
