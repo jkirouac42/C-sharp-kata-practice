@@ -21,6 +21,7 @@ namespace Kata_practice
 
             Console.WriteLine("1. ArrayAverage (Average of number in Array)\n");
             Console.WriteLine("2. ListAverage (Average of numbers in a list)\n");
+            Console.WriteLine("3. InputLetters (Input 3 letters and print in reverse order\n");
 
             int UserInput = int.Parse(Console.ReadLine());
 
@@ -32,6 +33,11 @@ namespace Kata_practice
             if(UserInput == 2)
             {
                 ListAverage();
+            }
+
+            if(UserInput == 3)
+            {
+                InputLetters();
             }
 
             else Console.WriteLine("\nThat is not a valid input. Please try again\n");
@@ -64,6 +70,47 @@ namespace Kata_practice
             int x = list.Sum() / 4;
             Console.WriteLine("The average of the sum of 10, 15, 20 and 30 is " + x);
             Console.WriteLine("\n Hit any key to enter to menu\n");
+            Console.ReadLine();
+            Menu();
+        }
+
+        static void InputLetters()
+        {
+            Console.WriteLine("Input a letter");
+            string l1 = Console.ReadLine();
+            bool result = l1.All(Char.IsLetter);
+
+            if(result == !true)
+            {
+                Console.WriteLine("Invalid input");
+                InputLetters();
+            }
+            else
+
+            Console.WriteLine("Input a letter");
+            string l2 = Console.ReadLine();
+
+            bool result2 = l2.All(Char.IsLetter);
+
+            if (result2 == !true)
+            {
+                Console.WriteLine("Invalid input");
+                InputLetters();
+            }
+            else
+            Console.WriteLine("Input a letter");
+            string l3 = Console.ReadLine();
+
+            bool result3 = l3.All(Char.IsLetter);
+
+            if (result3 == !true)
+            {
+                Console.WriteLine("Invalid input");
+                InputLetters();
+            }
+            else
+            Console.WriteLine("{0} {1} {2}", l3, l2, l1);
+
             Console.ReadLine();
             Menu();
         }
