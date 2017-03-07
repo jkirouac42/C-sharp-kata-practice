@@ -11,17 +11,19 @@ namespace Kata_practice
         static void Main(string[] args)
         {
             Menu();
+           
         }
 
         static void Menu()
         {
             //this method sums and then averages the contents of an int array
 
-            Console.WriteLine("Type the number of the method you want to run from the following list.\n");
+            Console.WriteLine("\nType the number of the method you want to run from the following list.\n");
 
             Console.WriteLine("1. ArrayAverage (Average of number in Array)\n");
             Console.WriteLine("2. ListAverage (Average of numbers in a list)\n");
-            Console.WriteLine("3. InputLetters (Input 3 letters and print in reverse order\n");
+            Console.WriteLine("3. InputLetters (Input 3 letters and print in reverse order\n)");
+            Console.WriteLine("4. Profile (create a user profile\n)");
 
             int UserInput = int.Parse(Console.ReadLine());
 
@@ -38,6 +40,10 @@ namespace Kata_practice
             if(UserInput == 3)
             {
                 InputLetters();
+            }
+            if(UserInput == 4)
+            {
+                Profile();
             }
 
             else Console.WriteLine("\nThat is not a valid input. Please try again\n");
@@ -115,6 +121,37 @@ namespace Kata_practice
             Console.ReadLine();
             Menu();
         }
+        static void Profile()
+        {
+
+
+            Console.WriteLine("Create your username\n");
+            List<string> userProfile = new List<string>();
+            userProfile.Add(Console.ReadLine());
+
+            Console.WriteLine("Create your password\n");
+            userProfile.Add(Console.ReadLine());
+        
+            Console.WriteLine("Enter your username\n");
+            List<string> userProfile2 = new List<string>();
+            userProfile2.Add(Console.ReadLine());
+
+            Console.WriteLine("Enter your password\n");
+            userProfile2.Add(Console.ReadLine());
+
+            if (userProfile.SequenceEqual(userProfile2))
+            {
+                Console.WriteLine("\nIdentity confirmed\n");
+            }
+
+            else Console.WriteLine("\nIncorrect\n");
+
+            }
+
+        }
+
+
+        
 
     }
-}
+
