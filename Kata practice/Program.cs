@@ -14,16 +14,18 @@ namespace Kata_practice
            
         }
 
+
         static void Menu()
         {
             //this method sums and then averages the contents of an int array
 
             Console.WriteLine("\nType the number of the method you want to run from the following list.\n");
 
-            Console.WriteLine("1. ArrayAverage (Average of number in Array)\n");
-            Console.WriteLine("2. ListAverage (Average of numbers in a list)\n");
-            Console.WriteLine("3. InputLetters (Input 3 letters and print in reverse order\n)");
-            Console.WriteLine("4. Profile (create a user profile\n)");
+            Console.WriteLine("1. ArrayAverage() Average of number in Array\n");
+            Console.WriteLine("2. ListAverage() Average of numbers in a list\n");
+            Console.WriteLine("3. InputLetters() Input 3 letters and print in reverse order\n");
+            Console.WriteLine("4. Profile() Create a user profile\n");
+            Console.WriteLine("5. FizzBuzz()\n");
 
             int UserInput = int.Parse(Console.ReadLine());
 
@@ -45,6 +47,10 @@ namespace Kata_practice
             {
                 Profile();
             }
+            if(UserInput == 5)
+            {
+                FizzBuzz();
+            }
 
             else Console.WriteLine("\nThat is not a valid input. Please try again\n");
             {
@@ -55,18 +61,19 @@ namespace Kata_practice
 
         static void ArrayAverage()
         {
-            //this method sums and averages the contents of a list
+            //this method sums and averages the contents of an array
 
             int[] array = { 10, 15, 20, 30 };
             int x = array.Sum() / 4;
             Console.WriteLine("The average of the sum of 10, 15, 20 and 30 is " + x);
-            Console.WriteLine("\n Hit any enter to enter to menu\n");
+            Console.WriteLine("\n Hit enter to return to menu\n");
             Console.ReadLine();
             Menu();
         }
 
         static void ListAverage()
         {
+            //this method sums and averages the contents of a list
 
             List<int> list = new List<int>();
             list.Add(10);
@@ -81,11 +88,14 @@ namespace Kata_practice
         }
 
         static void InputLetters()
-            //this method gets input from the user, verifies that it is valid, and prints it in reverse order.
+           
         {
+            //this method gets input from the user, verifies that it is valid, and prints it in reverse order.
             Console.WriteLine("Input a letter");
+
             string l1 = Console.ReadLine();
             bool result = l1.All(Char.IsLetter);
+
 
             if(result == !true)
             {
@@ -93,9 +103,9 @@ namespace Kata_practice
                 InputLetters();
             }
             else
-
             Console.WriteLine("Input a letter");
             string l2 = Console.ReadLine();
+
 
             bool result2 = l2.All(Char.IsLetter);
 
@@ -124,7 +134,6 @@ namespace Kata_practice
         static void Profile()
         {
 
-
             Console.WriteLine("Create your username\n");
             List<string> userProfile = new List<string>();
             userProfile.Add(Console.ReadLine());
@@ -147,6 +156,39 @@ namespace Kata_practice
             else Console.WriteLine("\nIncorrect\n");
 
             }
+
+        static void FizzBuzz()
+
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                bool Fizz = i % 3 == 0;
+                bool Buzz = i % 5 == 0;
+
+                if (Fizz && Buzz)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+
+               else if (Fizz)
+                {
+                    Console.WriteLine("Fizz");
+                }
+
+                else if (Buzz)
+                {
+                    Console.WriteLine("Buzz");
+                }
+
+                else Console.WriteLine(i);
+
+
+            }
+
+
+        }
+
+        
 
         }
 
